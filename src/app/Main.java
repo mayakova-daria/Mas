@@ -5,12 +5,10 @@ public class Main {
         int[] array = new int[20];
         java.util.Random random = new java.util.Random();
 
-        // Заповнення масиву випадковими числами в діапазоні від -100 до 100
         for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(201) - 100;
         }
 
-        // Виведення елементів масиву
         System.out.print("Елементи масиву: [");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i]);
@@ -20,7 +18,6 @@ public class Main {
         }
         System.out.println("]");
 
-        // Знаходження суми від'ємних чисел
         int negativeSum = 0;
         for (int number : array) {
             if (number < 0) {
@@ -29,7 +26,6 @@ public class Main {
         }
         System.out.println("Сума від'ємних чисел: " + negativeSum);
 
-        // Знаходження кількості парних і непарних чисел
         int evenCount = 0;
         int oddCount = 0;
         for (int number : array) {
@@ -42,7 +38,6 @@ public class Main {
         System.out.println("Кількість парних чисел: " + evenCount);
         System.out.println("Кількість непарних чисел: " + oddCount);
 
-        // Знаходження найбільшого та найменшого елементів та їх індексів
         int max = array[0];
         int min = array[0];
         int maxIndex = 0;
@@ -60,7 +55,6 @@ public class Main {
         System.out.println("Найменший елемент: " + min + " (з індексом " + minIndex + ")");
         System.out.println("Найбільший елемент: " + max + " (з індексом " + maxIndex + ")");
 
-        // Знаходження середнього арифметичного чисел після першого від'ємного числа
         boolean negativeFound = false;
         int sumAfterNegative = 0;
         int countAfterNegative = 0;
